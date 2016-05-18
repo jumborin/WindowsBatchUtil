@@ -1,10 +1,12 @@
 set ROOT_DIR=C:\Users\jumborin\Desktop\
 
+set IP_ADDRESS=192.168.11.1
+
 REM 日付時刻14桁を変数に代入
 set TIME=%DATE:~-10,4%%DATE:~-5,2%%DATE:~-2%_%TIME:~0,2%%TIME:~3,2%%TIME:~6,2% 
 
 REM テンプファイルに結果を書き出し
-ping 133.9.227.1 | find "パケット数:" > temp.txt
+ping %IP_ADDRESS% | find "パケット数:" > temp.txt
 
 REM 結果を読み込み、変数に代入
 FOR /f "delims=" %%t IN (temp.txt) DO SET RESULT=%%t
