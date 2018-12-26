@@ -1,5 +1,5 @@
 REM 結果ファイルの出力ディレクトリ
-set ROOT_DIR=C:\Users\jumborin\Desktop\
+set ROOT_DIR=.\
 
 REM 生存確認したい端末のIPアドレス
 set IP_ADDRESS=192.168.11.1
