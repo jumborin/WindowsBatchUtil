@@ -6,13 +6,13 @@ REM Path設定
 REM -------------------------------------------------------
 
 REM tempファイル1
-set CSV_FILE=C:\Users\jumborin\Desktop\temp1.csv
+set CSV_FILE=.\temp1.csv
 
 REM tempファイル2
-set CSV_FILE2=C:\Users\jumborin\Desktop\temp2.csv
+set CSV_FILE2=.\temp2.csv
 
 REM 起動時刻と終了時刻のみをテキストファイルに出力する。
-set RESULT_FILE=C:\Users\jumborin\Desktop\result.csv
+set RESULT_FILE=.\result.csv
 
 REM -------------------------------------------------------
 REM 処理開始
@@ -49,10 +49,8 @@ echo 分類,年,月,日,時,分,秒 > %RESULT_FILE%
 for /f "tokens=6,15 delims=," %%i in (%CSV_FILE2%) do (
   set tempTimeStr=%%j
   if %%i equ 6005 (
-    REM echo 起動時刻：!tempTimeStr:~0,4!/!tempTimeStr:~4,2!/!tempTimeStr:~6,2!_!tempTimeStr:~8,2!:!tempTimeStr:~10,2!:!tempTimeStr:~12,2!>> %RESULT_FILE%
     echo 起動時刻,!tempTimeStr:~0,4!,!tempTimeStr:~4,2!,!tempTimeStr:~6,2!,!tempTimeStr:~8,2!,!tempTimeStr:~10,2!,!tempTimeStr:~12,2!>> %RESULT_FILE%
   ) else if %%i equ 6006 (
-    REM echo 終了時刻：!tempTimeStr:~0,4!/!tempTimeStr:~4,2!/!tempTimeStr:~6,2!_!tempTimeStr:~8,2!:!tempTimeStr:~10,2!:!tempTimeStr:~12,2! >> %RESULT_FILE%
     echo 終了時刻,!tempTimeStr:~0,4!,!tempTimeStr:~4,2!,!tempTimeStr:~6,2!,!tempTimeStr:~8,2!,!tempTimeStr:~10,2!,!tempTimeStr:~12,2! >> %RESULT_FILE%
   ) else (
     echo "何もしない"
