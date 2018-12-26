@@ -1,7 +1,9 @@
 # batchUtil
 ユーティリティバッチ集
 
-backup.bat：指定フォルダからバックアップフォルダにファイルをすべてコピーするバッチ
+backup.bat：指定フォルダからバックアップフォルダにファイルをすべてコピーする。
+
+copyPdfFile.bat：自ファイル以下(サブディレクトリ含む)のPDFファイルを収集する。
 
 CreateDocumentFolder.bat：開発用フォルダを作成する。
 
