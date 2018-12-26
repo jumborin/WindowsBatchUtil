@@ -4,10 +4,10 @@ REM 日付4桁を出力
 SET TODAY=%DATE:~-10,4%%DATE:~-5,2%%DATE:~-2%
 
 REM ファイル探索ディレクトリ
-SET SEARCHDIR=C:\Users\jumborin\Desktop\test\
+SET SEARCHDIR=.\test\
 
 REM ファイル生成ディレクトリ
-SET ROOTDIR=C:\Users\jumborin\Desktop\
+SET ROOTDIR=.\
 
 REM 前回実行時のファイルリスト
 SET OLD_TEXT=%ROOTDIR%timestamp.txt
