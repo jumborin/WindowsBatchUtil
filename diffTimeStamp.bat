@@ -1,10 +1,12 @@
-@echo off
+REM 
+REM timestamp.txtと比較する。
+REM 
 
 REM 日付4桁を出力
 SET TODAY=%DATE:~-10,4%%DATE:~-5,2%%DATE:~-2%
 
 REM ファイル探索ディレクトリ
-SET SEARCHDIR=.\test\
+SET SEARCHDIR=.\
 
 REM ファイル生成ディレクトリ
 SET ROOTDIR=.\
@@ -19,6 +21,7 @@ REM 比較結果ファイル
 SET RESULT=%ROOTDIR%result.txt
 
 REM バックアップする
+if not exist %OLD_TEXT% type nul > %OLD_TEXT%
 MOVE %OLD_TEXT% %NEW_TEXT%
 
 REM 現在のファイルのタイムスタンプを取得し、ファイル出力する。
