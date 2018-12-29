@@ -15,8 +15,8 @@ diffTimeStamp.bat：前回実行時から指定フォルダ以下のファイル
 
 pingCheck.bat：サーバなどの生死を確認するためのバッチ
 
-ProxyOff.bat：プロキシをOFFにするバッチ
+ProxyOff.bat：プロキシをOFFにするバッチ(要管理者権限)
 
-ProxyOn.bat：プロキシをOnにするバッチ
+ProxyOn.bat：プロキシをOnにするバッチ(要管理者権限)
 
 startUp.bat：指定のプログラムを起動するバッチ
