@@ -1,32 +1,32 @@
 
-REM “¯ƒtƒHƒ‹ƒ_ˆÈ‰º‚ÌCSVƒtƒ@ƒCƒ‹‚ðƒ}[ƒW‚·‚é
+REM åŒãƒ•ã‚©ãƒ«ãƒ€ä»¥ä¸‹ã®CSVãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒžãƒ¼ã‚¸ã™ã‚‹
 
 SET TARGET_FILE=*.csv
 SET MERGE_TEMP_FILE=.\merge\merge.tmp
 SET MERGE_RESULT_FILE=.\merge\mergeResult.csv
 
-REM ƒ}[ƒWŒ‹‰Ê‚ð“ü‚ê‚éƒtƒHƒ‹ƒ_‚ðì¬
+REM ãƒžãƒ¼ã‚¸çµæžœã‚’å…¥ã‚Œã‚‹ãƒ•ã‚©ãƒ«ãƒ€ã‚’ä½œæˆ
 mkdir merge
 
-REM ƒtƒ@ƒCƒ‹‚ð’Pƒ‚Éƒ}[ƒW
+REM ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å˜ç´”ã«ãƒžãƒ¼ã‚¸
 copy /b %TARGET_FILE% %MERGE_TEMP_FILE%
 
-REM 1s–Ú(ƒwƒbƒ_[‚ðŽæ“¾‚·‚éB
+REM 1è¡Œç›®(ãƒ˜ãƒƒãƒ€ãƒ¼ã‚’å–å¾—ã™ã‚‹ã€‚
 for /f %%a in ( %MERGE_TEMP_FILE% ) do (
   @SET HEADER_DATA=%%a
   goto :exit
 )
 :exit
 
-REM ƒwƒbƒ_[s‚ð‘‚«o‚µ
+REM ãƒ˜ãƒƒãƒ€ãƒ¼è¡Œã‚’æ›¸ãå‡ºã—
 echo %HEADER_DATA%>>%MERGE_RESULT_FILE%
 
-REM ƒwƒbƒ_[s‚ðœŠO‚µAŒ‹‰Êƒtƒ@ƒCƒ‹‚É‘‚«o‚·
+REM ãƒ˜ãƒƒãƒ€ãƒ¼è¡Œã‚’é™¤å¤–ã—ã€çµæžœãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãå‡ºã™
 for /f %%c in ( %MERGE_TEMP_FILE% ) do (
   if not "%HEADER_DATA%"=="%%c" (
     echo %%c>>%MERGE_RESULT_FILE%
   )
 )
 
-REM ÅŒã‚É“Y•tƒtƒ@ƒCƒ‹‚ðíœ
+REM æœ€å¾Œã«æ·»ä»˜ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤
 del %MERGE_TEMP_FILE%
