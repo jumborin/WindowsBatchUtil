@@ -11,7 +11,7 @@ set TEMP_FILE=.\temp1.tmp
 REM tempファイル2
 set TEMP_FILE2=.\temp2.tmp
 
-REM 起動時刻と終了時刻のみをテキストファイルに出力する。
+REM 起動時刻と終了時刻のみを出力するテキストファイル
 set RESULT_FILE=.\result.csv
 
 REM -------------------------------------------------------
@@ -43,9 +43,11 @@ setlocal enabledelayedexpansion
     set tempStr=%%i
     echo !tempStr:,,=,_,! >> %TEMP_FILE2%
   )
-  
-REM ファイルに結果を出力する。
+
+REM ファイルに書き出す前にヘッダーを出力する
 echo 分類,年,月,日,時,分,秒 > %RESULT_FILE%
+
+REM ファイルに結果を出力する。
 for /f "tokens=6,15 delims=," %%i in (%TEMP_FILE2%) do (
   set tempTimeStr=%%j
   if %%i equ 6005 (
