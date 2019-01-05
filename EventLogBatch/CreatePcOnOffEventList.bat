@@ -1,24 +1,24 @@
 @echo off
-REM ‘OŒŽ‚Ì1“ú‚©‚çŒ»Ý‚Ü‚Å‚ÌPC‚Ì‹N“®Žž‚¨‚æ‚ÑI—¹Žž‚ðƒCƒxƒ“ƒgƒƒO‚©‚çŽæ“¾‚µACSVŒ`Ž®‚Åo—Í‚·‚éB
+REM å‰æœˆã®1æ—¥ã‹ã‚‰ç¾åœ¨ã¾ã§ã®PCã®èµ·å‹•æ™‚åˆ»ãŠã‚ˆã³çµ‚äº†æ™‚åˆ»ã‚’ã‚¤ãƒ™ãƒ³ãƒˆãƒ­ã‚°ã‹ã‚‰å–å¾—ã—ã€CSVå½¢å¼ã§å‡ºåŠ›ã™ã‚‹ã€‚
 
 REM -------------------------------------------------------
-REM PathÝ’è
+REM Pathè¨­å®š
 REM -------------------------------------------------------
 
-REM tempƒtƒ@ƒCƒ‹1
-set CSV_FILE=.\temp1.csv
+REM tempãƒ•ã‚¡ã‚¤ãƒ«1
+set TEMP_FILE=.\temp1.tmp
 
-REM tempƒtƒ@ƒCƒ‹2
-set CSV_FILE2=.\temp2.csv
+REM tempãƒ•ã‚¡ã‚¤ãƒ«2
+set TEMP_FILE2=.\temp2.tmp
 
-REM ‹N“®Žž‚ÆI—¹Žž‚Ì‚Ý‚ðƒeƒLƒXƒgƒtƒ@ƒCƒ‹‚Éo—Í‚·‚éB
+REM èµ·å‹•æ™‚åˆ»ã¨çµ‚äº†æ™‚åˆ»ã®ã¿ã‚’ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã«å‡ºåŠ›ã™ã‚‹ã€‚
 set RESULT_FILE=.\result.csv
 
 REM -------------------------------------------------------
-REM ˆ—ŠJŽn
+REM å‡¦ç†é–‹å§‹
 REM -------------------------------------------------------
 
-REM æŒŽ‚Ì1“ú‚Ì“ú•t‚ð‹‚ß‚éB
+REM å…ˆæœˆã®1æ—¥ã®æ—¥ä»˜ã‚’æ±‚ã‚ã‚‹ã€‚
 set year=%date:~0,4%
 set month=%date:~5,2%
 if %month% equ 01 (
@@ -33,36 +33,35 @@ if %month% equ 01 (
   set year2=%year%
 )
 
-REM CSVŒ`Ž®‚ÅƒCƒxƒ“ƒgƒƒO‚ð“f‚«o‚·B
-wmic ntevent where "(logfile='system' and timewritten >= '%year2%%month2%01' and (eventcode='6005' or eventcode='6006'))" list /format:CSV | find "," > %CSV_FILE%
+REM CSVå½¢å¼ã§ã‚¤ãƒ™ãƒ³ãƒˆãƒ­ã‚°ã‚’åãå‡ºã™ã€‚
+wmic ntevent where "(logfile='system' and timewritten >= '%year2%%month2%01' and (eventcode='6005' or eventcode='6006'))" list /format:CSV | find "," > %TEMP_FILE%
 
-REM for“à‚Ì•Ï”‚ð’x‰„“WŠJ‚·‚é
+REM forå†…ã®å¤‰æ•°ã‚’é…å»¶å±•é–‹ã™ã‚‹
 setlocal enabledelayedexpansion
-  REM ƒJƒ“ƒ}‚ª‘±‚¢‚Ä‚¢‚é•”•ª‚ðƒAƒ“ƒ_[ƒXƒRƒA‚Å’uŠ·‚·‚éB
-  for /f "delims=" %%i in (%CSV_FILE%) do (
+  REM ã‚«ãƒ³ãƒžãŒç¶šã„ã¦ã„ã‚‹éƒ¨åˆ†ã‚’ã‚¢ãƒ³ãƒ€ãƒ¼ã‚¹ã‚³ã‚¢ã§ç½®æ›ã™ã‚‹ã€‚
+  for /f "delims=" %%i in (%TEMP_FILE%) do (
     set tempStr=%%i
-    echo !tempStr:,,=,_,! >> %CSV_FILE2%
+    echo !tempStr:,,=,_,! >> %TEMP_FILE2%
   )
   
-REM ƒtƒ@ƒCƒ‹‚ÉŒ‹‰Ê‚ðo—Í‚·‚éB
-echo •ª—Þ,”N,ŒŽ,“ú,Žž,•ª,•b > %RESULT_FILE%
-for /f "tokens=6,15 delims=," %%i in (%CSV_FILE2%) do (
+REM ãƒ•ã‚¡ã‚¤ãƒ«ã«çµæžœã‚’å‡ºåŠ›ã™ã‚‹ã€‚
+echo åˆ†é¡ž,å¹´,æœˆ,æ—¥,æ™‚,åˆ†,ç§’ > %RESULT_FILE%
+for /f "tokens=6,15 delims=," %%i in (%TEMP_FILE2%) do (
   set tempTimeStr=%%j
   if %%i equ 6005 (
-    echo "‹N“®Žž",!tempTimeStr:~0,4!,!tempTimeStr:~4,2!,!tempTimeStr:~6,2!,!tempTimeStr:~8,2!,!tempTimeStr:~10,2!,!tempTimeStr:~12,2!>> %RESULT_FILE%
+    echo "èµ·å‹•æ™‚åˆ»",!tempTimeStr:~0,4!,!tempTimeStr:~4,2!,!tempTimeStr:~6,2!,!tempTimeStr:~8,2!,!tempTimeStr:~10,2!,!tempTimeStr:~12,2!>> %RESULT_FILE%
   ) else if %%i equ 6006 (
-    echo "I—¹Žž",!tempTimeStr:~0,4!,!tempTimeStr:~4,2!,!tempTimeStr:~6,2!,!tempTimeStr:~8,2!,!tempTimeStr:~10,2!,!tempTimeStr:~12,2! >> %RESULT_FILE%
+    echo "çµ‚äº†æ™‚åˆ»",!tempTimeStr:~0,4!,!tempTimeStr:~4,2!,!tempTimeStr:~6,2!,!tempTimeStr:~8,2!,!tempTimeStr:~10,2!,!tempTimeStr:~12,2! >> %RESULT_FILE%
   ) else (
-    echo "‰½‚à‚µ‚È‚¢"
+    echo "ä½•ã‚‚ã—ãªã„"
   )
 )
 endlocal
 
 REM -------------------------------------------------------
-REM Œãˆ—
+REM å¾Œå‡¦ç†
 REM -------------------------------------------------------
 
-REM ƒeƒ“ƒvƒtƒ@ƒCƒ‹‚ðíœ‚·‚é
-del /Q %CSV_FILE%
-del /Q %CSV_FILE2%
-
+REM ãƒ†ãƒ³ãƒ—ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã™ã‚‹
+del /Q %TEMP_FILE%
+del /Q %TEMP_FILE2%
