@@ -1,7 +1,11 @@
 @echo off
+
 REM ファイルの更新日時をファイル名の先頭にセットする。
-set ROOT_DIR=C:\Users\FZK07\Desktop
+
+set ROOT_DIR=D:\
 cd %ROOT_DIR%
+
+
 setlocal enabledelayedexpansion
 for %%i In (*.jpg) do (
   set tempLine=%%~ti
