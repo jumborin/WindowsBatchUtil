@@ -1,3 +1,5 @@
+@echo off
+
 REM 
 REM timestamp.txtと比較する。
 REM 
