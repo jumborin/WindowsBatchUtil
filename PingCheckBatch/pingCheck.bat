@@ -1,3 +1,7 @@
+@echo off
+
+REM 指定IPアドレスの生存確認を行うバッチ
+
 REM 結果ファイルの出力ディレクトリ
 set ROOT_DIR=.\
 
