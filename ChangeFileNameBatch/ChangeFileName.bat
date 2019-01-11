@@ -1,18 +1,26 @@
 @echo off
 
+REM ==================================================
 REM ファイルの更新日時をファイル名の先頭にセットする。
+REM ==================================================
 
-set ROOT_DIR=D:\
+REM ルートディレクトリの定義
+SET ROOT_DIR=.\
+
+REM 名称を変更するファイルの定義
+SET FILE_PATTERN=*.jpg
+
+REM ルートディレクトリに移動
 cd %ROOT_DIR%
 
-
+REM ファイルの更新日時を取得し、ファイル名の先頭にセット
 setlocal enabledelayedexpansion
-for %%i In (*.jpg) do (
-  set tempLine=%%~ti
-  set tempLine2=!tempLine: =_!
-  set tempLine3=!tempLine2:/=!
-  set tempLine4=!tempLine3::=!
-  set tempLine5=!tempLine4!_%%i
-  rename .\%%i !tempLine5!
+for %%i In (%FILE_PATTERN%) do (
+  SET tempLine=%%~ti
+  SET tempLine2=!tempLine: =_!
+  SET tempLine3=!tempLine2:/=!
+  SET tempLine4=!tempLine3::=!
+  SET tempLine5=!tempLine4!_%%i
+  rename %ROOT_DIR%%%i !tempLine5!
 )
 endlocal
