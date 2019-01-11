@@ -1,6 +1,9 @@
 @echo off
 
+REM ==========================================================
+REM スタートアップに登録することで指定のアプリをPC起動時に実行する
 REM 不要な処理はコメントアウトしてください。
+REM ==========================================================
 
 REM Outlook2013For32Bitを開く
 REM start "" "c:\program files\microsoft office\office15\outlook.exe"

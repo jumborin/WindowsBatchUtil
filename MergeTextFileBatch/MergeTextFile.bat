@@ -1,7 +1,10 @@
 @echo off
 
+REM ==========================================================
 REM 同フォルダ以下のCSVファイルをマージする
+REM ==========================================================
 
+REM 変数の定義
 SET TARGET_FILE=*.csv
 SET MERGE_TEMP_FILE=.\merge\merge.tmp
 SET MERGE_RESULT_FILE=.\merge\mergeResult.csv
@@ -29,5 +32,5 @@ for /f %%c in ( %MERGE_TEMP_FILE% ) do (
   )
 )
 
-REM 最後に添付ファイルを削除
+REM 最後に一時ファイルを削除
 del %MERGE_TEMP_FILE%
