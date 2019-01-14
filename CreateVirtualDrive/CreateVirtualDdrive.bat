@@ -1,10 +1,16 @@
 @echo off
 
 REM ==========================================================
-REM VirtualDのフォルダを仮想Dドライブにする。
+REM 指定フォルダを仮想ドライブにする。
 REM ==========================================================
 
 SET VIRTUAL_DRIVE=C:\VirtualD
+SET DRIVE_PATH=D:
+
+REM 
+IF EXIST %VIRTUAL_DRIVE% (
+  mkdir %VIRTUAL_DRIVE%
+)
 
 REM 仮想ドライブを作成する。
-subst D: %VIRTUAL_DRIVE%
+subst %DRIVE_PATH% %VIRTUAL_DRIVE%
