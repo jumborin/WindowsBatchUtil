@@ -1,22 +1,38 @@
 # batchUtil
 ユーティリティバッチ集
 
-backup.bat：指定フォルダからバックアップフォルダにファイルをすべてコピーする。
+ChangeFileNameBatch/ChangeFileName.bat：ファイルの更新日時をファイル名の先頭にセットする。
 
-CollectOfficeFile.bat：自ファイル以下(サブディレクトリ含む)のOfficeファイルを収集する。
+CollectFileBatch/CollectOfficeFile.bat：officeDirを作成し、自ファイル以下のofficeファイルをコピーする。
 
-CollectPdfFile.bat：自ファイル以下(サブディレクトリ含む)のPDFファイルを収集する。
+CollectFileBatch/CollectPdfFile.bat：pdfDirを作成し、自ファイル以下のPDFファイルをコピーする。
 
-CreateDocumentFolder.bat：開発用フォルダを作成する。
+CompileCsharpBatch/CompileCsharp.bat：指定フォルダ内のcsファイルをコンパイルする。
 
-createEventList.bat：result.csvにPCの起動時刻と終了時刻の一覧を作成する。
+CompileVisualBasicBatch/CompileVisualBasic.bat：指定のvbファイルをコンパイルする。
 
-diffTimeStamp.bat：前回実行時から指定フォルダ以下のファイルが更新されているかを確認するバッチ
+CreateDocumentFolderBatch/CreateDocumentFolder.bat：開発用フォルダを作成する。
 
-pingCheck.bat：サーバなどの生死を確認するためのバッチ
+CreateVirtualDriveBatch/CreateVirtualDrive.bat：指定フォルダを仮想ドライブにする。
 
-ProxyOff.bat：プロキシをOFFにするバッチ(要管理者権限)
+DiffTimeStampBatch/DiffTimeStamp.bat：指定フォルダ以下のファイル一覧を作成し、前回作成したファイル一覧(timestamp.txt)と比較する。
 
-ProxyOn.bat：プロキシをOnにするバッチ(要管理者権限)
+EmptyBatch/Empty.bat：メモリを開放する？
 
-startUp.bat：指定のプログラムを起動するバッチ
+EventLogBatch/CreatePcOffEventList.bat：前月の1日から現在までのPCの終了時刻をイベントログから取得し、CSV形式で出力する。
+
+EventLogBatch/CreatePcOnEventList.bat：前月の1日から現在までのPCの起動時刻をイベントログから取得し、CSV形式で出力する。
+
+EventLogBatch/CreatePcOnOffEventList.bat：前月の1日から現在までのPCの起動時刻および終了時刻をイベントログから取得し、CSV形式で出力する。
+
+FileBackUpBatch/FileBackUp.bat：バックアップ元フォルダからバックアップ先フォルダにバックアップする。
+
+MergeTextFileBatch/MergeTextFile.bat：同フォルダ以下のCSVファイルをマージする。
+
+PingCheckBatch/PingCheck.bat：指定IPアドレスの生存確認を行うバッチ
+
+ProxySwitchBatch/ProxyOff.bat：「LANにプロキシサーバーを使用する」のチェックボックスを外し、ProxyをOFFにする。(要管理者権限)
+
+ProxySwitchBatch/ProxyOn.bat：「LANにプロキシサーバーを使用する」のチェックボックスにチェックを入れ、PROXYをオンにする。(要管理者権限)
+
+StartUpBatch/StartUp.bat：指定のプログラムを起動するバッチ
