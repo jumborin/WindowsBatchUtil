@@ -11,6 +11,8 @@ CompileCsharpBatch/CompileCsharp.bat：指定フォルダ内のcsファイルを
 
 CompileVisualBasicBatch/CompileVisualBasic.bat：指定のvbファイルをコンパイルする。
 
+CompressBatch：圧縮ファイル作成・解凍処理を行う。
+
 CreateDocumentFolderBatch/CreateDocumentFolder.bat：開発用フォルダを作成する。
 
 CreateVirtualDriveBatch/CreateVirtualDrive.bat：指定フォルダを仮想ドライブにする。
