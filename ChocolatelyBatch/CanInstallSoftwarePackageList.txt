@@ -5301,7 +5301,3 @@ qnapi 0.2.3 [Approved]
 resedit 1.6.6 [Approved] Downloads cached for licensed users
 reqrypt.portable 1.4.1 [Approved] Downloads cached for licensed users
 5301 packages found.
-
-Did you know Pro / Business automatically syncs with Programs and
- Features? Learn more about Package Synchronizer at
- https://chocolatey.org/compare
