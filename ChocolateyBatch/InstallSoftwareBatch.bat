@@ -6,6 +6,8 @@ REM 注意事項：同階層にpackages.configがあること。
 REM 管理者権限で実行すること。
 REM =========================================================================
 
+cd /d %~dp0
+
 REM packages.configで定義したソフトウェアをChocolateyでインストールする。
 choco install -y packages.config
 
