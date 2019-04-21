@@ -12,5 +12,5 @@ SET OUTPUT_DIR=jre-min
 
 
 REM JREÇçÏê¨Ç∑ÇÈ
-jlink --compress=2 --module-path %JDK_PATH% --add-modules java.base --output %OUTPUT_DIR%
+jlink --compress=2 --module-path %JDK_PATH% --add-modules java.base,java.sql,java.desktop --output %OUTPUT_DIR%
 
