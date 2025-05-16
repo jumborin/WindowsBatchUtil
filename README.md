@@ -38,3 +38,6 @@ ProxySwitchBatch/ProxyOff.bat：「LANにプロキシサーバーを使用する
 ProxySwitchBatch/ProxyOn.bat：「LANにプロキシサーバーを使用する」のチェックボックスにチェックを入れ、PROXYをオンにする。(要管理者権限)
 
 StartUpBatch/StartUp.bat：指定のプログラムを起動するバッチ
+
+WingetUpdateAllBatch.bat：wingetを使用してインストール済ソフトウェアをアップデートするバッチ
+
