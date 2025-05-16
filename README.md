@@ -1,5 +1,5 @@
 # batchUtil
-ユーティリティバッチ集
+Windowsで利用可能なユーティリティバッチ集
 
 ChangeFileNameBatch/ChangeFileName.bat：ファイルの更新日時をファイル名の先頭にセットする。
 
@@ -41,3 +41,4 @@ StartUpBatch/StartUp.bat：指定のプログラムを起動するバッチ
 
 WingetUpdateAllBatch.bat：wingetを使用してインストール済ソフトウェアをアップデートするバッチ
 
+ZipWithBashBatch：フォルダごとパスワード付きzipファイルにする。
