@@ -4,7 +4,7 @@ setlocal enabledelayedexpansion
 set "self=%~nx0"
 set "output=README.txt"
 
-echo バッチファイル一覧と処理概要 > "%output%"
+echo ## Windowsで利用可能なユーティリティバッチ集 > "%output%"
 echo =============================== >> "%output%"
 
 for /r %%f in (*.bat) do (
@@ -20,6 +20,7 @@ for /r %%f in (*.bat) do (
         echo. >> "%output%"
     )
 )
+echo 以上 >> "%output%"
 
 echo 完了しました。README.txt を確認してください。
 endlocal

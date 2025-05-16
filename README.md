@@ -1,44 +1,117 @@
-# batchUtil
-Windowsã§åˆ©ç”¨å¯èƒ½ãªãƒ¦ãƒ¼ãƒ†ã‚£ãƒªãƒ†ã‚£ãƒãƒƒãƒé›†
-
-ChangeFileNameBatch/ChangeFileName.batï¼šãƒ•ã‚¡ã‚¤ãƒ«ã®æ›´æ–°æ—¥æ™‚ã‚’ãƒ•ã‚¡ã‚¤ãƒ«åã®å…ˆé ­ã«ã‚»ãƒƒãƒˆã™ã‚‹ã€‚
-
-CollectFileBatch/CollectOfficeFile.batï¼šofficeDirã‚’ä½œæˆã—ã€è‡ªãƒ•ã‚¡ã‚¤ãƒ«ä»¥ä¸‹ã®officeãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚³ãƒ”ãƒ¼ã™ã‚‹ã€‚
-
-CollectFileBatch/CollectPdfFile.batï¼špdfDirã‚’ä½œæˆã—ã€è‡ªãƒ•ã‚¡ã‚¤ãƒ«ä»¥ä¸‹ã®PDFãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚³ãƒ”ãƒ¼ã™ã‚‹ã€‚
-
-CompileCsharpBatch/CompileCsharp.batï¼šæŒ‡å®šãƒ•ã‚©ãƒ«ãƒ€å†…ã®csãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã™ã‚‹ã€‚
-
-CompileVisualBasicBatch/CompileVisualBasic.batï¼šæŒ‡å®šã®vbãƒ•ã‚¡ã‚¤ãƒ«ã‚’ã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã™ã‚‹ã€‚
-
-CompressBatchï¼šåœ§ç¸®ãƒ•ã‚¡ã‚¤ãƒ«ä½œæˆãƒ»è§£å‡å‡¦ç†ã‚’è¡Œã†ã€‚
-
-CreateDocumentFolderBatch/CreateDocumentFolder.batï¼šé–‹ç™ºç”¨ãƒ•ã‚©ãƒ«ãƒ€ã‚’ä½œæˆã™ã‚‹ã€‚
-
-CreateVirtualDriveBatch/CreateVirtualDrive.batï¼šæŒ‡å®šãƒ•ã‚©ãƒ«ãƒ€ã‚’ä»®æƒ³ãƒ‰ãƒ©ã‚¤ãƒ–ã«ã™ã‚‹ã€‚
-
-DiffTimeStampBatch/DiffTimeStamp.batï¼šæŒ‡å®šãƒ•ã‚©ãƒ«ãƒ€ä»¥ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§ã‚’ä½œæˆã—ã€å‰å›ä½œæˆã—ãŸãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§(timestamp.txt)ã¨æ¯”è¼ƒã™ã‚‹ã€‚
-
-EmptyBatch/Empty.batï¼šãƒ¡ãƒ¢ãƒªã‚’é–‹æ”¾ã™ã‚‹ï¼Ÿ
-
-EventLogBatch/CreatePcOffEventList.batï¼šå‰æœˆã®1æ—¥ã‹ã‚‰ç¾åœ¨ã¾ã§ã®PCã®çµ‚äº†æ™‚åˆ»ã‚’ã‚¤ãƒ™ãƒ³ãƒˆãƒ­ã‚°ã‹ã‚‰å–å¾—ã—ã€CSVå½¢å¼ã§å‡ºåŠ›ã™ã‚‹ã€‚
-
-EventLogBatch/CreatePcOnEventList.batï¼šå‰æœˆã®1æ—¥ã‹ã‚‰ç¾åœ¨ã¾ã§ã®PCã®èµ·å‹•æ™‚åˆ»ã‚’ã‚¤ãƒ™ãƒ³ãƒˆãƒ­ã‚°ã‹ã‚‰å–å¾—ã—ã€CSVå½¢å¼ã§å‡ºåŠ›ã™ã‚‹ã€‚
-
-EventLogBatch/CreatePcOnOffEventList.batï¼šå‰æœˆã®1æ—¥ã‹ã‚‰ç¾åœ¨ã¾ã§ã®PCã®èµ·å‹•æ™‚åˆ»ãŠã‚ˆã³çµ‚äº†æ™‚åˆ»ã‚’ã‚¤ãƒ™ãƒ³ãƒˆãƒ­ã‚°ã‹ã‚‰å–å¾—ã—ã€CSVå½¢å¼ã§å‡ºåŠ›ã™ã‚‹ã€‚
-
-FileBackUpBatch/FileBackUp.batï¼šãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—å…ƒãƒ•ã‚©ãƒ«ãƒ€ã‹ã‚‰ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—å…ˆãƒ•ã‚©ãƒ«ãƒ€ã«ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã™ã‚‹ã€‚
-
-MergeTextFileBatch/MergeTextFile.batï¼šåŒãƒ•ã‚©ãƒ«ãƒ€ä»¥ä¸‹ã®CSVãƒ•ã‚¡ã‚¤ãƒ«ã‚’ãƒãƒ¼ã‚¸ã™ã‚‹ã€‚
-
-PingCheckBatch/PingCheck.batï¼šæŒ‡å®šIPã‚¢ãƒ‰ãƒ¬ã‚¹ã®ç”Ÿå­˜ç¢ºèªã‚’è¡Œã†ãƒãƒƒãƒ
-
-ProxySwitchBatch/ProxyOff.batï¼šã€ŒLANã«ãƒ—ãƒ­ã‚­ã‚·ã‚µãƒ¼ãƒãƒ¼ã‚’ä½¿ç”¨ã™ã‚‹ã€ã®ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹ã‚’å¤–ã—ã€Proxyã‚’OFFã«ã™ã‚‹ã€‚(è¦ç®¡ç†è€…æ¨©é™)
-
-ProxySwitchBatch/ProxyOn.batï¼šã€ŒLANã«ãƒ—ãƒ­ã‚­ã‚·ã‚µãƒ¼ãƒãƒ¼ã‚’ä½¿ç”¨ã™ã‚‹ã€ã®ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹ã«ãƒã‚§ãƒƒã‚¯ã‚’å…¥ã‚Œã€PROXYã‚’ã‚ªãƒ³ã«ã™ã‚‹ã€‚(è¦ç®¡ç†è€…æ¨©é™)
-
-StartUpBatch/StartUp.batï¼šæŒ‡å®šã®ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’èµ·å‹•ã™ã‚‹ãƒãƒƒãƒ
-
-WingetUpdateAllBatch.batï¼šwingetã‚’ä½¿ç”¨ã—ã¦ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«æ¸ˆã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã‚’ã‚¢ãƒƒãƒ—ãƒ‡ãƒ¼ãƒˆã™ã‚‹ãƒãƒƒãƒ
-
-ZipWithBashBatchï¼šãƒ•ã‚©ãƒ«ãƒ€ã”ã¨ãƒ‘ã‚¹ãƒ¯ãƒ¼ãƒ‰ä»˜ãzipãƒ•ã‚¡ã‚¤ãƒ«ã«ã™ã‚‹ã€‚
+## Windows‚Å—˜—p‰Â”\‚Èƒ†[ƒeƒBƒŠƒeƒBƒoƒbƒ`W 
+=============================== 
+ChangeBrightnessBatch\BrightnessMaxBatch.bat 
+REM ˆ—ŠT—vF‰æ–Ê‚Ì‹P“x‚ğÅ‘å(100“)‚É‚·‚éB
+ 
+ChangeBrightnessBatch\BrightnessMinBatch.bat 
+REM ˆ—ŠT—vF‰æ–Ê‚Ì‹P“x‚ğÅ¬(0“)‚É‚·‚éB
+ 
+ChangeBrightnessBatch\BrightnessOutputReportBatch.bat 
+REM ˆ—ŠT—vF“dŒ¹İ’èŠÖ˜A‚ÌƒŒƒ|[ƒg‚ğo—Í‚·‚éB
+ 
+ChangeSleepStatus\ChangeSleepStatus.bat 
+REM ˆ—ŠT—vFPC‚ğƒXƒŠ[ƒvó‘Ô‚É‚·‚éB
+ 
+ChocolateyBatch\InstallChocolateyBatch.bat 
+REM ˆ—ŠT—vFChocolatey–{‘Ì‚ğƒCƒ“ƒXƒg[ƒ‹‚·‚éB
+ 
+ChocolateyBatch\InstallSoftwareBatch.bat 
+REM ˆ—ŠT—vFpackages.config‚Å’è‹`‚µ‚½ƒ\ƒtƒgƒEƒFƒA‚ğChocolatey‚ÅƒCƒ“ƒXƒg[ƒ‹‚·‚éB
+ 
+ChocolateyBatch\OutputSoftwarePackageListBatch.bat 
+REM ˆ—ŠT—vFChocolatey‚ÅƒCƒ“ƒXƒg[ƒ‹‰Â”\‚Èƒ\ƒtƒgƒEƒFƒAƒpƒbƒP[ƒWƒŠƒXƒg‚ğo—Í‚·‚éB
+ 
+ChocolateyBatch\UpdateChocolateyBatch.bat 
+REM ˆ—ŠT—vFChocolatey–{‘Ì‚ğƒAƒbƒvƒf[ƒg‚·‚éB
+ 
+ChocolateyBatch\UpdateSoftwareBatch.bat 
+REM ˆ—ŠT—vFChocolatey‚ÅŠÇ—‚µ‚Ä‚¢‚éƒ\ƒtƒgƒEƒFƒA‚ğˆêŠ‡ƒAƒbƒvƒf[ƒg‚·‚éB
+ 
+CollectFileBatch\CollectOfficeFile.bat 
+REM ˆ—ŠT—vFofficeDir‚ğì¬‚µA©ƒtƒ@ƒCƒ‹ˆÈ‰º‚Ìofficeƒtƒ@ƒCƒ‹‚ğƒRƒs[‚·‚éB
+ 
+CollectFileBatch\CollectPdfFile.bat 
+REM ˆ—ŠT—vFpdfDir‚ğì¬‚µA©ƒtƒ@ƒCƒ‹ˆÈ‰º‚ÌPDFƒtƒ@ƒCƒ‹‚ğƒRƒs[‚·‚éB
+ 
+CompileCsharpBatch\CompileCsharp.bat 
+REM ˆ—ŠT—vFC#‚Ìƒ\[ƒXƒR[ƒh‚ğƒRƒ“ƒpƒCƒ‹‚·‚éB
+ 
+CompileVisualBasicBatch\CompileVisualBasic.bat 
+REM ˆ—ŠT—vFVisualBasic‚ğ–¼Ì‚ğw’è‚µ‚ÄƒRƒ“ƒpƒCƒ‹‚·‚éB
+ 
+CompressBatch\Compress7zBatch.bat 
+REM ˆ—ŠT—vFˆ³kƒtƒ@ƒCƒ‹‚ğ–{“ú“ú•t8Œ…‚ÌƒpƒXƒ[ƒh•t‚«7zƒtƒ@ƒCƒ‹‚Æ‚µ‚Äì¬‚·‚éB
+ 
+CompressBatch\CompressZipBatch.bat 
+REM ˆ—ŠT—vFˆ³kƒtƒ@ƒCƒ‹‚ğ–{“ú“ú•t8Œ…‚ÌƒpƒXƒ[ƒh•t‚«zipƒtƒ@ƒCƒ‹‚Æ‚µ‚Äì¬‚·‚éB
+ 
+CreateDocumentFolderBatch\CreateDocumentFolder.bat 
+REM ˆ—ŠT—vFƒoƒbƒ`ƒtƒ@ƒCƒ‹’¼‰º‚ÉƒhƒLƒ…ƒƒ“ƒg®——p‚ÌƒtƒHƒ‹ƒ_‚ğì¬‚·‚éB
+ 
+CreateJREFromJDK\CreateJREFromJDF11.bat 
+REM ˆ—ŠT—vFJDK‚©‚ç•K—v‚Èƒ‚ƒWƒ…[ƒ‹‚Ì‚İ‘g‚İ‚ñ‚¾JRE‚ğì¬‚·‚éB
+ 
+CreateVirtualDriveBatch\CreateVirtualdrive.bat 
+REM ˆ—ŠT—vFw’èƒtƒHƒ‹ƒ_‚ğ‰¼‘zƒhƒ‰ƒCƒu‚Æ‚µ‚Äƒhƒ‰ƒCƒuƒpƒX‚ÉŠ„‚è“–‚Ä‚éB
+ 
+DiffTimeStampBatch\DiffTimeStamp.bat 
+REM ˆ—ŠT—vFw’èƒtƒHƒ‹ƒ_ˆÈ‰º‚Ìƒtƒ@ƒCƒ‹ˆê——‚ğì¬‚µA‘O‰ñì¬‚µ‚½ƒtƒ@ƒCƒ‹ˆê——(timestamp.txt)‚Æ”äŠr‚·‚éB
+ 
+EmptyBatch\empty.bat 
+REM ˆ—ŠT—vFƒƒ‚ƒŠ‚ğƒNƒŠ[ƒ“‚·‚éBƒ^ƒXƒNƒXƒPƒWƒ…[ƒ‰‚Å1ŠÔ–ˆ‚ÉÀs‚·‚é‚æ‚¤‚É“o˜^‚µ‚Ä‚¨‚­‚Æ•Ö—˜
+ 
+EventLogBatch\CreatePcOffEventList.bat 
+REM ˆ—ŠT—vF‘OŒ‚Ì1“ú‚©‚çŒ»İ‚Ü‚Å‚ÌPC‚ÌI—¹‚ğƒCƒxƒ“ƒgƒƒO‚©‚çæ“¾‚µACSVŒ`®‚Åo—Í‚·‚éB
+ 
+EventLogBatch\CreatePcOnEventList.bat 
+REM ˆ—ŠT—vF‘OŒ‚Ì1“ú‚©‚çŒ»İ‚Ü‚Å‚ÌPC‚Ì‹N“®‚ğƒCƒxƒ“ƒgƒƒO‚©‚çæ“¾‚µACSVŒ`®‚Åo—Í‚·‚éB
+ 
+EventLogBatch\CreatePcOnOffEventList.bat 
+REM ˆ—ŠT—vF‘OŒ‚Ì1“ú‚©‚çŒ»İ‚Ü‚Å‚ÌPC‚Ì‹N“®‚¨‚æ‚ÑI—¹‚ğƒCƒxƒ“ƒgƒƒO‚©‚çæ“¾‚µACSVŒ`®‚Åo—Í‚·‚éB
+ 
+FileBackUpBatch\FileBackUp.bat 
+REM ˆ—ŠT—vFƒoƒbƒNƒAƒbƒvŒ³ƒtƒHƒ‹ƒ_‚©‚çƒoƒbƒNƒAƒbƒvæƒtƒHƒ‹ƒ_‚ÉƒoƒbƒNƒAƒbƒv‚·‚éB
+ 
+GetActiveWindow\GetActiveWindow.bat 
+REM ˆ—ŠT—vFŒ»İŠˆ«‰»‚µ‚Ä‚¢‚éƒEƒCƒ“ƒhƒE‚Ìî•ñ‚ğƒƒOƒtƒ@ƒCƒ‹‚Éo—Í‚·‚éB
+ 
+MergeTextFileBatch\MergeCsvFile.bat 
+REM ˆ—ŠT—vF“¯ƒtƒHƒ‹ƒ_ˆÈ‰º‚ÌCSVƒtƒ@ƒCƒ‹‚ğƒ}[ƒW‚·‚éB
+ 
+OutputOSReportBatch\OutputOSReportBatch.bat 
+REM ˆ—ŠT—vFWindows‚Ìİ’è‚ğƒŒƒ|[ƒg‚Æ‚µ‚Äo—Í‚·‚éB
+ 
+PingCheckBatch\pingCheck.bat 
+REM ˆ—ŠT—vFw’èIPƒAƒhƒŒƒX‚Ì¶‘¶Šm”F‚ğs‚¤ƒoƒbƒ`
+ 
+ProxySwitchBatch\ProxyOff.bat 
+REM ˆ—ŠT—vFuLAN‚ÉƒvƒƒLƒVƒT[ƒo[‚ğg—p‚·‚év‚Ìƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚ğŠO‚µAProxy‚ğOFF‚É‚·‚éB
+ 
+ProxySwitchBatch\ProxyOn.bat 
+REM ˆ—ŠT—vFuLAN‚ÉƒvƒƒLƒVƒT[ƒo[‚ğg—p‚·‚év‚Ìƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚Éƒ`ƒFƒbƒN‚ğ“ü‚êAPROXY‚ğƒIƒ“‚É‚·‚éBuƒ[ƒJƒ‹ƒAƒhƒŒƒX‚É‚ÍƒvƒƒLƒVƒT[ƒo‚ğw’è‚µ‚È‚¢v‚Éƒ`ƒFƒbƒN‚ğ“ü‚ê‚é
+ 
+RenameFileNameBatch\RenameFileName.bat 
+REM ˆ—ŠT—vFƒtƒ@ƒCƒ‹‚ÌXV“ú‚ğƒtƒ@ƒCƒ‹–¼‚Ìæ“ª‚ÉƒZƒbƒg‚·‚éB
+ 
+RenameImageFileBatch\rename_imagesByCreateTime.bat 
+REM ˆ—ŠT—vF’¼‰º‚ÌƒfƒBƒŒƒNƒgƒŠ‚Ìƒtƒ@ƒCƒ‹‚Ìƒtƒ@ƒCƒ‹–¼‚ğƒtƒ@ƒCƒ‹ì¬“ú(yyyyMMdd_HHmmss)‚É‚·‚é
+ 
+ShutdownBatch\LogOffBatch.bat 
+REM ˆ—ŠT—vF1•ªŒãƒƒOƒIƒt‚·‚éB
+ 
+ShutdownBatch\RebootAfterOneMinuteBatch.bat 
+REM ˆ—ŠT—vF1•ªŒãÄ‹N“®‚·‚éB
+ 
+ShutdownBatch\ShutdownAfterOneMinuteBatch.bat 
+REM ˆ—ŠT—vF1•ªŒãƒVƒƒƒbƒgƒ_ƒEƒ“‚·‚éB
+ 
+StartUpBatch\StartUp.bat 
+REM ˆ—ŠT—vFƒXƒ^[ƒgƒAƒbƒv‚É“o˜^‚·‚é‚±‚Æ‚Åw’è‚ÌƒAƒvƒŠ‚ğPC‹N“®‚ÉÀs‚·‚éB
+ 
+WingetUpdateAllBatch\WingetUpdateAllBatch.bat 
+REM ˆ—ŠT—vFwinget‚ğg—p‚µ‚ÄƒCƒ“ƒXƒg[ƒ‹Ïƒ\ƒtƒgƒEƒFƒA‚ğƒAƒbƒvƒf[ƒg‚·‚éB
+ 
+ZipWithBashBatch\EncryptZipBatch.bat 
+REM ˆ—ŠT—vFƒtƒHƒ‹ƒ_‚²‚ÆƒpƒXƒ[ƒh•t‚«zipƒtƒ@ƒCƒ‹‚É‚·‚éB
+ 
+ˆÈã 
