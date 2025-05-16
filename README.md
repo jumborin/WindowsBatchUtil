@@ -1,5 +1,7 @@
 ## Windows‚Å—˜—p‰Â”\‚Èƒ†[ƒeƒBƒŠƒeƒBƒoƒbƒ`W 
+ 
 =============================== 
+ 
 ChangeBrightnessBatch\BrightnessMaxBatch.bat 
 REM ˆ—ŠT—vF‰æ–Ê‚Ì‹P“x‚ğÅ‘å(100“)‚É‚·‚éB
  
@@ -9,7 +11,7 @@ REM ˆ—ŠT—vF‰æ–Ê‚Ì‹P“x‚ğÅ¬(0“)‚É‚·‚éB
 ChangeBrightnessBatch\BrightnessOutputReportBatch.bat 
 REM ˆ—ŠT—vF“dŒ¹İ’èŠÖ˜A‚ÌƒŒƒ|[ƒg‚ğo—Í‚·‚éB
  
-ChangeSleepStatus\ChangeSleepStatus.bat 
+ChangeSleepStatusBatch\ChangeSleepStatus.bat 
 REM ˆ—ŠT—vFPC‚ğƒXƒŠ[ƒvó‘Ô‚É‚·‚éB
  
 ChocolateyBatch\InstallChocolateyBatch.bat 
@@ -48,7 +50,7 @@ REM ˆ—ŠT—vFˆ³kƒtƒ@ƒCƒ‹‚ğ–{“ú“ú•t8Œ…‚ÌƒpƒXƒ[ƒh•t‚«zipƒtƒ@ƒCƒ‹‚Æ‚µ‚Äì¬‚·‚é
 CreateDocumentFolderBatch\CreateDocumentFolder.bat 
 REM ˆ—ŠT—vFƒoƒbƒ`ƒtƒ@ƒCƒ‹’¼‰º‚ÉƒhƒLƒ…ƒƒ“ƒg®——p‚ÌƒtƒHƒ‹ƒ_‚ğì¬‚·‚éB
  
-CreateJREFromJDK\CreateJREFromJDF11.bat 
+CreateJREFromJDKBatch\CreateJREFromJDF11.bat 
 REM ˆ—ŠT—vFJDK‚©‚ç•K—v‚Èƒ‚ƒWƒ…[ƒ‹‚Ì‚İ‘g‚İ‚ñ‚¾JRE‚ğì¬‚·‚éB
  
 CreateVirtualDriveBatch\CreateVirtualdrive.bat 
@@ -72,7 +74,7 @@ REM ˆ—ŠT—vF‘OŒ‚Ì1“ú‚©‚çŒ»İ‚Ü‚Å‚ÌPC‚Ì‹N“®‚¨‚æ‚ÑI—¹‚ğƒCƒxƒ“ƒgƒƒO‚©‚
 FileBackUpBatch\FileBackUp.bat 
 REM ˆ—ŠT—vFƒoƒbƒNƒAƒbƒvŒ³ƒtƒHƒ‹ƒ_‚©‚çƒoƒbƒNƒAƒbƒvæƒtƒHƒ‹ƒ_‚ÉƒoƒbƒNƒAƒbƒv‚·‚éB
  
-GetActiveWindow\GetActiveWindow.bat 
+GetActiveWindowBatch\GetActiveWindow.bat 
 REM ˆ—ŠT—vFŒ»İŠˆ«‰»‚µ‚Ä‚¢‚éƒEƒCƒ“ƒhƒE‚Ìî•ñ‚ğƒƒOƒtƒ@ƒCƒ‹‚Éo—Í‚·‚éB
  
 MergeTextFileBatch\MergeCsvFile.bat 
@@ -90,10 +92,10 @@ REM ˆ—ŠT—vFuLAN‚ÉƒvƒƒLƒVƒT[ƒo[‚ğg—p‚·‚év‚Ìƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚ğŠO‚µAProxy
 ProxySwitchBatch\ProxyOn.bat 
 REM ˆ—ŠT—vFuLAN‚ÉƒvƒƒLƒVƒT[ƒo[‚ğg—p‚·‚év‚Ìƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚Éƒ`ƒFƒbƒN‚ğ“ü‚êAPROXY‚ğƒIƒ“‚É‚·‚éBuƒ[ƒJƒ‹ƒAƒhƒŒƒX‚É‚ÍƒvƒƒLƒVƒT[ƒo‚ğw’è‚µ‚È‚¢v‚Éƒ`ƒFƒbƒN‚ğ“ü‚ê‚é
  
-RenameFileNameBatch\RenameFileName.bat 
+RenameFileNameBatch\renameFileNameAddUpdateTime.bat 
 REM ˆ—ŠT—vFƒtƒ@ƒCƒ‹‚ÌXV“ú‚ğƒtƒ@ƒCƒ‹–¼‚Ìæ“ª‚ÉƒZƒbƒg‚·‚éB
  
-RenameImageFileBatch\rename_imagesByCreateTime.bat 
+RenameFileNameBatch\renameImagesByCreateTime.bat 
 REM ˆ—ŠT—vF’¼‰º‚ÌƒfƒBƒŒƒNƒgƒŠ‚Ìƒtƒ@ƒCƒ‹‚Ìƒtƒ@ƒCƒ‹–¼‚ğƒtƒ@ƒCƒ‹ì¬“ú(yyyyMMdd_HHmmss)‚É‚·‚é
  
 ShutdownBatch\LogOffBatch.bat 

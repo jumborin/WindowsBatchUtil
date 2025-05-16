@@ -5,7 +5,9 @@ set "self=%~nx0"
 set "output=README.txt"
 
 echo ## Windowsで利用可能なユーティリティバッチ集 > "%output%"
+echo. >> "%output%"
 echo =============================== >> "%output%"
+echo. >> "%output%"
 
 for /r %%f in (*.bat) do (
     if /i not "%%~nxf"=="%self%" (
