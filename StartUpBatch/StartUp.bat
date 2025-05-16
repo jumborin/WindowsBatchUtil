@@ -1,22 +1,22 @@
 @echo off
 
 REM =======================================================================================
-REM å‡¦ç†æ¦‚è¦ï¼šã‚¹ã‚¿ãƒ¼ãƒˆã‚¢ãƒƒãƒ—ã«ç™»éŒ²ã™ã‚‹ã“ã¨ã§æŒ‡å®šã®ã‚¢ãƒ—ãƒªã‚’PCèµ·å‹•æ™‚ã«å®Ÿè¡Œã™ã‚‹ã€‚
-REM å‰ææ¡ä»¶ï¼šãªã—
-REM æ³¨æ„äº‹é …ï¼šä¸è¦ãªå‡¦ç†ã¯ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã™ã‚‹ã“ã¨ã€‚
+REM ˆ—ŠT—vFƒXƒ^[ƒgƒAƒbƒv‚É“o˜^‚·‚é‚±‚Æ‚Åw’è‚ÌƒAƒvƒŠ‚ğPC‹N“®‚ÉÀs‚·‚éB
+REM ‘O’ñğŒF‚È‚µ
+REM ’ˆÓ–€F•s—v‚Èˆ—‚ÍƒRƒƒ“ƒgƒAƒEƒg‚·‚é‚±‚ÆB
 REM =======================================================================================
 
-REM Outlook2013For32Bitã‚’é–‹ã
+REM Outlook2013For32Bit‚ğŠJ‚­
 REM start "" "c:\program files\microsoft office\office15\outlook.exe"
 
-REM Outlook2013For64Bitã‚’é–‹ã
+REM Outlook2013For64Bit‚ğŠJ‚­
 REM start "" "c:\program files (x86)\microsoft office\office15\outlook.exe"
 
-REM Outlook2016ã‚’é–‹ã
+REM Outlook2016‚ğŠJ‚­
 start "" "c:\program files\microsoft office\office16\outlook.exe"
 
-REM InternetExplorerã§Githubã‚’é–‹ãã€‚
+REM InternetExplorer‚ÅGithub‚ğŠJ‚­B
 start "" "C:\Program Files\Internet Explorer\iexplore.exe" "https://github.com/"
 
-REM Google Chromeã§Githubã‚’é–‹ãã€‚
+REM Google Chrome‚ÅGithub‚ğŠJ‚­B
 start "" "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "https://github.com/"

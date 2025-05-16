@@ -1,11 +1,11 @@
 @echo off
 
 REM =======================================================================================
-REM å‡¦ç†æ¦‚è¦ï¼šãƒ¡ãƒ¢ãƒªã‚’ã‚¯ãƒªãƒ¼ãƒ³ã™ã‚‹ã€‚ã‚¿ã‚¹ã‚¯ã‚¹ã‚±ã‚¸ãƒ¥ãƒ¼ãƒ©ã§1æ™‚é–“æ¯Žã«å®Ÿè¡Œã™ã‚‹ã‚ˆã†ã«ç™»éŒ²ã—ã¦ãŠãã¨ä¾¿åˆ©
-REM å‰ææ¡ä»¶ï¼šWindows Resource Kits ã‚’ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã—ã¦ã„ã‚‹ã“ã¨ã€‚
-REM æ³¨æ„äº‹é …ï¼šãªã—
-REM DLå…ƒURLï¼šhttps://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=17657
+REM ˆ—ŠT—vFƒƒ‚ƒŠ‚ðƒNƒŠ[ƒ“‚·‚éBƒ^ƒXƒNƒXƒPƒWƒ…[ƒ‰‚Å1ŽžŠÔ–ˆ‚ÉŽÀs‚·‚é‚æ‚¤‚É“o˜^‚µ‚Ä‚¨‚­‚Æ•Ö—˜
+REM ‘O’ñðŒFWindows Resource Kits ‚ðƒCƒ“ƒXƒg[ƒ‹‚µ‚Ä‚¢‚é‚±‚ÆB
+REM ’ˆÓŽ–€F‚È‚µ
+REM DLŒ³URLFhttps://www.microsoft.com/en-us/download/details.aspx?displaylang=en&id=17657
 REM =======================================================================================
 
-REM empty.exeã‚’å®Ÿè¡Œã™ã‚‹ã€‚
+REM empty.exe‚ðŽÀs‚·‚éB
 C:\Program Files (x86)\Windows Resource Kits\Tools\empty.exe

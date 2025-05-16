@@ -1,33 +1,33 @@
 @echo off
 
 REM =======================================================================================
-REM å‡¦ç†æ¦‚è¦ï¼šå‰æœˆã®1æ—¥ã‹ã‚‰ç¾åœ¨ã¾ã§ã®PCã®èµ·å‹•æ™‚åˆ»ã‚’ã‚¤ãƒ™ãƒ³ãƒˆãƒ­ã‚°ã‹ã‚‰å–å¾—ã—ã€CSVå½¢å¼ã§å‡ºåŠ›ã™ã‚‹ã€‚
-REM å‰ææ¡ä»¶ï¼šãªã—
-REM æ³¨æ„äº‹é …ï¼šãªã—
+REM ˆ—ŠT—vF‘OŒŽ‚Ì1“ú‚©‚çŒ»Ý‚Ü‚Å‚ÌPC‚Ì‹N“®Žž‚ðƒCƒxƒ“ƒgƒƒO‚©‚çŽæ“¾‚µACSVŒ`Ž®‚Åo—Í‚·‚éB
+REM ‘O’ñðŒF‚È‚µ
+REM ’ˆÓŽ–€F‚È‚µ
 REM =======================================================================================
 
 REM ==========================================================
-REM Pathè¨­å®š
+REM PathÝ’è
 REM ==========================================================
 
-REM tempãƒ•ã‚¡ã‚¤ãƒ«1
+REM tempƒtƒ@ƒCƒ‹1
 SET TEMP_FILE=.\temp1.tmp
 
-REM tempãƒ•ã‚¡ã‚¤ãƒ«2
+REM tempƒtƒ@ƒCƒ‹2
 SET TEMP_FILE2=.\temp2.tmp
 
-REM èµ·å‹•æ™‚åˆ»ã®ã¿ã‚’å‡ºåŠ›ã™ã‚‹ãƒ†ã‚­ã‚¹ãƒˆãƒ•ã‚¡ã‚¤ãƒ«
+REM ‹N“®Žž‚Ì‚Ý‚ðo—Í‚·‚éƒeƒLƒXƒgƒtƒ@ƒCƒ‹
 SET RESULT_FILE=.\result.csv
 
-REM PCèµ·å‹•æ™‚ã®ã‚¤ãƒ™ãƒ³ãƒˆãƒ­ã‚°ID
+REM PC‹N“®Žž‚ÌƒCƒxƒ“ƒgƒƒOID
 SET START_LOG_ID=6005
 
 
 REM ==========================================================
-REM å‡¦ç†é–‹å§‹
+REM ˆ—ŠJŽn
 REM ==========================================================
 
-REM å…ˆæœˆã®1æ—¥ã®æ—¥ä»˜ã‚’æ±‚ã‚ã‚‹ã€‚
+REM æŒŽ‚Ì1“ú‚Ì“ú•t‚ð‹‚ß‚éB
 SET year=%date:~0,4%
 SET month=%date:~5,2%
 if %month% equ 01 (
@@ -42,35 +42,35 @@ if %month% equ 01 (
   SET year2=%year%
 )
 
-REM CSVå½¢å¼ã§ã‚¤ãƒ™ãƒ³ãƒˆãƒ­ã‚°ã‚’åãå‡ºã™ã€‚
+REM CSVŒ`Ž®‚ÅƒCƒxƒ“ƒgƒƒO‚ð“f‚«o‚·B
 wmic ntevent where "(logfile='system' and timewritten >= '%year2%%month2%01' and (eventcode='%START_LOG_ID%'))" list /format:CSV | find "," > %TEMP_FILE%
 
-REM forå†…ã®å¤‰æ•°ã‚’é…å»¶å±•é–‹ã™ã‚‹
+REM for“à‚Ì•Ï”‚ð’x‰„“WŠJ‚·‚é
 setlocal enabledelayedexpansion
-  REM ã‚«ãƒ³ãƒžãŒç¶šã„ã¦ã„ã‚‹éƒ¨åˆ†ã‚’ã‚¢ãƒ³ãƒ€ãƒ¼ã‚¹ã‚³ã‚¢ã§ç½®æ›ã™ã‚‹ã€‚
+  REM ƒJƒ“ƒ}‚ª‘±‚¢‚Ä‚¢‚é•”•ª‚ðƒAƒ“ƒ_[ƒXƒRƒA‚Å’uŠ·‚·‚éB
   for /f "delims=" %%i in (%TEMP_FILE%) do (
     SET tempStr=%%i
     echo !tempStr:,,=,_,! >> %TEMP_FILE2%
   )
 
-REM ãƒ•ã‚¡ã‚¤ãƒ«ã«æ›¸ãå‡ºã™å‰ã«ãƒ˜ãƒƒãƒ€ãƒ¼ã‚’å‡ºåŠ›ã™ã‚‹
-echo åˆ†é¡ž,å¹´,æœˆ,æ—¥,æ™‚,åˆ†,ç§’ > %RESULT_FILE%
+REM ƒtƒ@ƒCƒ‹‚É‘‚«o‚·‘O‚Éƒwƒbƒ_[‚ðo—Í‚·‚é
+echo •ª—Þ,”N,ŒŽ,“ú,Žž,•ª,•b > %RESULT_FILE%
 
-REM ãƒ•ã‚¡ã‚¤ãƒ«ã«çµæžœã‚’å‡ºåŠ›ã™ã‚‹ã€‚
+REM ƒtƒ@ƒCƒ‹‚ÉŒ‹‰Ê‚ðo—Í‚·‚éB
 for /f "tokens=6,15 delims=," %%i in (%TEMP_FILE2%) do (
   SET tempTimeStr=%%j
   if %%i equ %START_LOG_ID% (
-    echo "èµ·å‹•æ™‚åˆ»",!tempTimeStr:~0,4!,!tempTimeStr:~4,2!,!tempTimeStr:~6,2!,!tempTimeStr:~8,2!,!tempTimeStr:~10,2!,!tempTimeStr:~12,2!>> %RESULT_FILE%
+    echo "‹N“®Žž",!tempTimeStr:~0,4!,!tempTimeStr:~4,2!,!tempTimeStr:~6,2!,!tempTimeStr:~8,2!,!tempTimeStr:~10,2!,!tempTimeStr:~12,2!>> %RESULT_FILE%
   ) else (
-    echo "ä½•ã‚‚ã—ãªã„"
+    echo "‰½‚à‚µ‚È‚¢"
   )
 )
 endlocal
 
 REM ==========================================================
-REM å¾Œå‡¦ç†
+REM Œãˆ—
 REM ==========================================================
 
-REM ãƒ†ãƒ³ãƒ—ãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‰Šé™¤ã™ã‚‹
+REM ƒeƒ“ƒvƒtƒ@ƒCƒ‹‚ðíœ‚·‚é
 del /Q %TEMP_FILE%
 del /Q %TEMP_FILE2%

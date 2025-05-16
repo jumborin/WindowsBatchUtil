@@ -1,18 +1,18 @@
 @echo off
 
 REM =======================================================================================
-REM 処理概要：「LANにプロキシサーバーを使用する」のチェックボックスにチェックを入れ、PROXYをオンにする。「ローカルアドレスにはプロキシサーバを指定しない」にチェックを入れる
-REM 前提条件：管理者権限で実行すること
-REM 注意事項：なし
+REM �����T�v�F�uLAN�Ƀv���L�V�T�[�o�[���g�p����v�̃`�F�b�N�{�b�N�X�Ƀ`�F�b�N�����APROXY���I���ɂ���B�u���[�J���A�h���X�ɂ̓v���L�V�T�[�o���w�肵�Ȃ��v�Ƀ`�F�b�N������
+REM �O������F�Ǘ��Ҍ����Ŏ��s���邱��
+REM ���ӎ����F�Ȃ�
 REM =======================================================================================
 
-REM 「LANにプロキシサーバーを使用する」のチェックボックスにチェックを入れ、PROXYをオンにする。
+REM �uLAN�Ƀv���L�V�T�[�o�[���g�p����v�̃`�F�b�N�{�b�N�X�Ƀ`�F�b�N�����APROXY���I���ɂ���B
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings" /f /v ProxyEnable /t reg_dword /d 1
 
-REM PROXYのアドレスとポート番号を設定する。
-REM プロキシサーバとポート番号を末尾に指定することで設定可能
+REM PROXY�̃A�h���X�ƃ|�[�g�ԍ���ݒ肷��B
+REM �v���L�V�T�[�o�ƃ|�[�g�ԍ��𖖔��Ɏw�肷�邱�ƂŐݒ�\
 REM reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings" /f /v ProxyServer /t reg_sz /d
 
-REM 「ローカルアドレスにはプロキシサーバを指定しない」にチェックを入れる
+REM �u���[�J���A�h���X�ɂ̓v���L�V�T�[�o���w�肵�Ȃ��v�Ƀ`�F�b�N������
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings" /f /v ProxyOverride /t reg_sz /d "<local>"
 

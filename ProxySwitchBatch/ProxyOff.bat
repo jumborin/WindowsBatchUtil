@@ -1,10 +1,10 @@
 @echo off
 
 REM =======================================================================================
-REM å‡¦ç†æ¦‚è¦ï¼šã€ŒLANã«ãƒ—ãƒ­ã‚­ã‚·ã‚µãƒ¼ãƒãƒ¼ã‚’ä½¿ç”¨ã™ã‚‹ã€ã®ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹ã‚’å¤–ã—ã€Proxyã‚’OFFã«ã™ã‚‹ã€‚
-REM å‰ææ¡ä»¶ï¼šç®¡ç†è€…æ¨©é™ã§å®Ÿè¡Œã™ã‚‹ã“ã¨
-REM æ³¨æ„äº‹é …ï¼šãªã—
+REM ˆ—ŠT—vFuLAN‚ÉƒvƒƒLƒVƒT[ƒo[‚ðŽg—p‚·‚év‚Ìƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚ðŠO‚µAProxy‚ðOFF‚É‚·‚éB
+REM ‘O’ñðŒFŠÇ—ŽÒŒ ŒÀ‚ÅŽÀs‚·‚é‚±‚Æ
+REM ’ˆÓŽ–€F‚È‚µ
 REM =======================================================================================
 
-REM ã€ŒLANã«ãƒ—ãƒ­ã‚­ã‚·ã‚µãƒ¼ãƒãƒ¼ã‚’ä½¿ç”¨ã™ã‚‹ã€ã®ãƒã‚§ãƒƒã‚¯ãƒœãƒƒã‚¯ã‚¹ã‚’å¤–ã—ã€Proxyã‚’OFFã«ã™ã‚‹ã€‚
+REM uLAN‚ÉƒvƒƒLƒVƒT[ƒo[‚ðŽg—p‚·‚év‚Ìƒ`ƒFƒbƒNƒ{ƒbƒNƒX‚ðŠO‚µAProxy‚ðOFF‚É‚·‚éB
 reg add "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings" /f /v ProxyEnable /t reg_dword /d 0

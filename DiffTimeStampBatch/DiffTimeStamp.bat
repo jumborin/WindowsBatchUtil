@@ -1,36 +1,36 @@
 @echo off
 
 REM =======================================================================================
-REM å‡¦ç†æ¦‚è¦ï¼šæŒ‡å®šãƒ•ã‚©ãƒ«ãƒ€ä»¥ä¸‹ã®ãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§ã‚’ä½œæˆã—ã€å‰å›žä½œæˆã—ãŸãƒ•ã‚¡ã‚¤ãƒ«ä¸€è¦§(timestamp.txt)ã¨æ¯”è¼ƒã™ã‚‹ã€‚
-REM å‰ææ¡ä»¶ï¼šãªã—
-REM æ³¨æ„äº‹é …ï¼šãªã—
+REM ˆ—ŠT—vFŽw’èƒtƒHƒ‹ƒ_ˆÈ‰º‚Ìƒtƒ@ƒCƒ‹ˆê——‚ðì¬‚µA‘O‰ñì¬‚µ‚½ƒtƒ@ƒCƒ‹ˆê——(timestamp.txt)‚Æ”äŠr‚·‚éB
+REM ‘O’ñðŒF‚È‚µ
+REM ’ˆÓŽ–€F‚È‚µ
 REM =======================================================================================
 
-REM æ—¥ä»˜4æ¡ã‚’å‡ºåŠ›
+REM “ú•t4Œ…‚ðo—Í
 SET TODAY=%DATE:~-10,4%%DATE:~-5,2%%DATE:~-2%
 
-REM ãƒ•ã‚¡ã‚¤ãƒ«æŽ¢ç´¢ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
+REM ƒtƒ@ƒCƒ‹’TõƒfƒBƒŒƒNƒgƒŠ
 SET SEARCHDIR=.\
 
-REM ãƒ•ã‚¡ã‚¤ãƒ«ç”Ÿæˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
+REM ƒtƒ@ƒCƒ‹¶¬ƒfƒBƒŒƒNƒgƒŠ
 SET ROOTDIR=.\
 
-REM å‰å›žå®Ÿè¡Œæ™‚ã®ãƒ•ã‚¡ã‚¤ãƒ«ãƒªã‚¹ãƒˆ
+REM ‘O‰ñŽÀsŽž‚Ìƒtƒ@ƒCƒ‹ƒŠƒXƒg
 SET OLD_TEXT=%ROOTDIR%timestamp.txt
 
-REM ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—å…ˆãƒ•ã‚¡ã‚¤ãƒ«ãƒªã‚¹ãƒˆ
+REM ƒoƒbƒNƒAƒbƒvæƒtƒ@ƒCƒ‹ƒŠƒXƒg
 SET NEW_TEXT=%ROOTDIR%%TODAY%_timestamp.txt
 
-REM æ¯”è¼ƒçµæžœãƒ•ã‚¡ã‚¤ãƒ«
+REM ”äŠrŒ‹‰Êƒtƒ@ƒCƒ‹
 SET RESULT=%ROOTDIR%result.txt
 
-REM ãƒãƒƒã‚¯ã‚¢ãƒƒãƒ—ã™ã‚‹
+REM ƒoƒbƒNƒAƒbƒv‚·‚é
 if not exist %OLD_TEXT% type nul > %OLD_TEXT%
 MOVE %OLD_TEXT% %NEW_TEXT%
 
-REM ç¾åœ¨ã®ãƒ•ã‚¡ã‚¤ãƒ«ã®ã‚¿ã‚¤ãƒ ã‚¹ã‚¿ãƒ³ãƒ—ã‚’å–å¾—ã—ã€ãƒ•ã‚¡ã‚¤ãƒ«å‡ºåŠ›ã™ã‚‹ã€‚
-dir /S /OGN %SEARCHDIR% | find /V "<DIR>" | find /V "å€‹ã®ãƒ•ã‚¡ã‚¤ãƒ«" | find /V "å€‹ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª" | find /V "ãƒ•ã‚¡ã‚¤ãƒ«ã®ç·æ•°" > %OLD_TEXT%
+REM Œ»Ý‚Ìƒtƒ@ƒCƒ‹‚Ìƒ^ƒCƒ€ƒXƒ^ƒ“ƒv‚ðŽæ“¾‚µAƒtƒ@ƒCƒ‹o—Í‚·‚éB
+dir /S /OGN %SEARCHDIR% | find /V "<DIR>" | find /V "ŒÂ‚Ìƒtƒ@ƒCƒ‹" | find /V "ŒÂ‚ÌƒfƒBƒŒƒNƒgƒŠ" | find /V "ƒtƒ@ƒCƒ‹‚Ì‘”" > %OLD_TEXT%
 
-REM ã‚¿ã‚¤ãƒ ã‚¹ã‚¿ãƒ³ãƒ—ã®æ¯”è¼ƒã‚’è¡Œã„ã€æ¯”è¼ƒçµæžœã¨ã—ã¦ãƒ•ã‚¡ã‚¤ãƒ«å‡ºåŠ›ã™ã‚‹ã€‚
+REM ƒ^ƒCƒ€ƒXƒ^ƒ“ƒv‚Ì”äŠr‚ðs‚¢A”äŠrŒ‹‰Ê‚Æ‚µ‚Äƒtƒ@ƒCƒ‹o—Í‚·‚éB
 FC /N /L /1 /OFF %OLD_TEXT% %NEW_TEXT% > %RESULT%
 
